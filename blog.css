@@ -1,6 +1,7 @@
 :root{
     --graycolor: #f1f1f1;
-    --blackcolor:#000;
+    --hovercolor:#cac6c6;
+    
 }
 *{
     padding: 0;
@@ -18,7 +19,6 @@ body{
 header{
     text-align: center;
     align-content: center;
-    border: 1px solid black;
     padding: 32px 16px;
 }
 header h1{
@@ -27,7 +27,7 @@ header h1{
     margin: 10px 0;
 }
 header h1 b{
-    font-weight: bolder;
+    font-weight: 550;
 }
 header p{
     margin: 15px 0;
@@ -43,33 +43,45 @@ header p > span{
 
  /* main style part */
  main{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 2fr 1fr;
+    display: flex;
+   width: 100%;
     padding-right: 16px;
     padding-left: 16px;
+    gap: 30px;
  }
-
- aside{
-    width: 33.33%;
- }
-
+ 
+ /* left side of the main */
  .main-content{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 10px;
     width: 66.66%;
+    gap: 20px;
+    /* padding: 10px; */
+    
  }
 .main-sections{
     display: flex;
     flex-direction: column;
     width: 100%;
     background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.34);
 }
-.main-sections img{
+.main-section-2{
+    margin-top: 20px; 
+    /* on the real project it is used hr and then it assings margin top and bottom to hr, but I assinged double classess to my left side main section and put a margin top to the second one  */
+}
+.main-sections-images{
     width: 100%;   
 }
+.main-sections-images img{
+    width: 100%;
+}
+
+.main-sections-texts{
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
 .main-sections h3{
     margin: 10px 0;
     font-size: 24px;
@@ -79,6 +91,7 @@ header p > span{
     margin: 10px 0;
     font-size: 18px;
     text-transform: capitalize;
+    font-weight: 400;
 }
 .main-sections h5 > span{
     font-size: 18px;
@@ -91,6 +104,202 @@ header p > span{
     line-height: 22.5px;
     color: var(--blackcolor);
 }
+ /* button part through the left side section */
+.main-sections-buttons-and-comments-container{
+margin:15px 0px;
+padding: 0px 16px;
+display: flex;
+justify-content: space-between;
+}
+.main-sections-buttons{
+    border:1px solid #ccc;
+    padding: 12px 24px;
+}
+.main-sections-buttons:hover{
+   background-color: var(--hovercolor);
+   cursor: pointer;
+}
+.read-more-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+
+.read-more-btn b {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.read-more-btn .arrow {
+    font-size: 11px; 
+    vertical-align: middle;
+}
+.main-sections-comments{
+    padding: 12px 24px;
+}
+.main-sections-comments-2 span{
+    border-radius: 50%;
+}
+.main-sections-comments b{
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.main-sections-comments span{
+    text-align: center;
+    margin-left: 4px;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    
+}
+
+
+
+ /* left side of the main */
+
+ /* right side of the main(aside part) */
+
+ aside{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 33.33%;
+ }
+
+/* fisrt aside section */
+ .first-aside-section{
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.34);
+ }
+ .first-aside-section-img-container{
+    width: 100%;
+ }
+ .first-aside-section-img-container img{
+    width: 100%;
+ }
+ .first-aside-section-text-container{
+    width: 100%;
+    padding: 0px 16px;
+    margin: 0px 0px 15px;
+    
+ }
+ .first-aside-section-text-container h4{
+    font-size: 20px;
+    margin: 10px 0px;
+    text-transform: capitalize;
+    font-weight: 400;
+ }
+/* fisrt aside section */
+
+/* second aside section */
+.second-aside-section{
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.34);
+}
+.second-aside-section-title-container{
+    padding: 8px 16px;
+}
+.second-aside-section-title-container h4{
+    margin: 10px 0;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+}
+.second-aside-section ul{
+    background-color: #fff;
+}
+.second-aside-section ul li{
+    list-style-type: none;
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+}
+.second-aside-section ul li:hover{
+    background-color: #cac6c6;
+}
+.second-aside-section ul li img{
+    width: 50px;
+    height: 50px;
+    margin-right: 16px;
+}
+.popular-posts-texts{
+    display: flex;
+    flex-direction: column;
+}
+.fisrt-ul-li-span{
+    font-size: 18px; 
+    text-transform: capitalize; 
+}
+.second-ul-li-span{
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+/* second aside section */
+
+/* third aside section */
+.third-aside-section{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.34) 
+}
+.third-aside-section-title-container{
+    padding: 8px 16px;
+}
+.third-aside-section-title-container h4{
+    margin: 10px 0;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.third-aside-section-container{
+    padding: 16px 0;
+}
+.third-aside-section-tags-container{
+    margin: 0 0 15px ; 
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding:0 16px ;
+    gap: 7px;
+}
+.black-tag-span-item{
+    background-color: black;
+    color: #fff;
+    padding: 0 8px;
+    margin-bottom: 16px;
+    font-size: 15px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.white-tag-span-items{
+    background-color: var(--graycolor);
+    padding: 0 8px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    text-align: center;
+    text-transform: capitalize;
+}
+/* this is the class for tags items of norway, ikea and diy */
+.upperscase-tags{
+    text-transform: uppercase;
+}
+/* this is the class for tags items of norway, ikea and diy */
+
+
+
+/* third aside section */
+
+
+
+ /* right side of the main(aside part) */
+
+/* main style part */
 
 
  
