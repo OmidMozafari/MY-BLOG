@@ -15,6 +15,14 @@ body{
     line-height: 1.5;
 }
 
+/* contanier style */
+.container{
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 16px;
+}
+/* contanier style */
+
  /* header section styles */
 header{
     text-align: center;
@@ -45,7 +53,7 @@ header p > span{
  main{
     display: flex;
     width: 100%;
-    padding: 0 16px 40px 16px;
+    padding-bottom: 40px;
     gap: 30px;
  }
  
@@ -157,8 +165,6 @@ justify-content: space-between;
     
 }
 
-
-
  /* left side of the main */
 
  /* right side of the main(aside part) */
@@ -166,7 +172,7 @@ justify-content: space-between;
  aside{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
     width: 33.33%;
  }
 
@@ -283,8 +289,8 @@ justify-content: space-between;
     padding: 0 8px;
     margin-bottom: 16px;
     font-size: 12px;
-    text-align: center;
     text-transform: capitalize;
+    align-content: center;
 }
 /* this is the class for tags items of norway, ikea and diy */
 .upperscase-tags{
@@ -355,4 +361,26 @@ footer{
 }
 /* footer part */
 
- 
+  /* main section media query */
+ @media (min-width:500px) and (max-width: 992px){
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-content{
+        width: 100%;
+    }
+    aside{
+        width: 100%;
+    }
+    
+   #mingsum{
+    display: none;
+   }
+ }
+ @media screen and (max-width: 600px) {
+    .main-sections-comments{
+        display: none;
+    }
+ }
+ /* main section media query */
